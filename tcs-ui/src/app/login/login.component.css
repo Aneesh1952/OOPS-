@@ -1,0 +1,17 @@
+#button {
+    background-color: #59349e;
+    color: antiquewhite;
+}
+
+.field {
+    margin: 20px;
+}
+
+.form {
+    height: 400px;
+    width: 600px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: #59349e;
+}

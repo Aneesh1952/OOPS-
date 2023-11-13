@@ -1,0 +1,38 @@
+<div id="form">
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+        <div class="field" style="font-weight: bolder; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #345e9ee8;">
+    
+            <h1 style="color: #59349e; font-weight: 400;"> Delete </h1>
+    
+        </div>
+        
+        <div class="field">
+    
+            <p style="font-size: large;">Enter Password to Continue</p>
+    
+        </div>
+    
+        <div class="field">
+            
+            <mat-form-field appearance="fill">
+                <mat-label>password</mat-label>
+                <input matInput [formControl]="password" [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button type="button" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+    
+        </div>
+    
+        <div class="field">
+    
+            <button mat-raised-button type="submit" id="button" [disabled]="loginForm.invalid" >delete</button>
+            <button mat-raised-button color="warn" type="button" class="field" (click)="closeForm()">close</button>
+    
+        </div>
+    
+    </form>
+
+</div>

@@ -1,0 +1,23 @@
+<p>Edit slot</p>
+<p> Date: {{data.date}}, Slot: {{data.slot}}:00 - {{data.slot}}:50 </p>
+
+<div>
+<h4>set status</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Status</mat-label>
+  <select matNativeControl required [formControl]="status">
+    <option value="true">busy</option>
+    <option value="false">free</option>
+  </select>
+</mat-form-field>
+</div>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Add a note</mat-label>
+  <textarea matInput [formControl]="note"></textarea>
+</mat-form-field>
+
+<div class="flex-container">
+  <button class="bt" mat-raised-button (click)="save()"> save </button>
+  <button class="bt" mat-raised-button (click)="dialogClose()"> cancel </button>
+</div>

@@ -1,0 +1,27 @@
+<p style="margin: 30px;font-size: x-large;">My weekly-schedule</p>
+
+<div class="flex-container">
+
+    <button mat-raised-button style="background-color: rgb(49, 95, 134);" (click)="click()">Add a slot</button>
+    <button mat-raised-button style="background-color: rgb(49, 95, 134);margin-left: 10%;" (click)="bootstrapEdamaa()">prev week</button>
+    <button mat-raised-button style="background-color: rgb(49, 95, 134);margin-left: 60%;" (click)="bootstrapkudi()">next week</button>
+
+</div>
+
+<div class="flex-container">
+
+    <div class="flex-child">
+        <p>slots</p>
+        <span *ngFor="let index of [0,1,2,3,4,5,6,7,8,9]">
+            <div class="shit2"><p>  {{index+8}}:00 - {{index+8}}:50  </p></div>
+        </span>
+    </div>
+
+    <div *ngFor="let dailySchedule of dailySchedules;let i=index" class="flex-child">
+        <p>{{dates[i] | date}}</p>
+        <span *ngFor="let slot of dailySchedule.slots; let j=index">
+            <div *ngIf="slot && slot.status" [style.background-color]="slot===null?'rgb(107, 177, 238)':amarnath" class="shit" (mousedown)='lick($event,i,j)'> Note - {{slot.note}}</div>
+            <div *ngIf="!slot || !slot.status" [style.background-color]="'rgb(107, 177, 238)'" class="shit" (mousedown)='lick($event,i,j)'><p style="font-size: small;color: rgb(230, 229, 229);">Available</p></div>
+        </span>
+    </div>
+</div>

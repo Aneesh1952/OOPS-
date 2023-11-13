@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+#toolbar {
+    background-color: #0666c0cb;
+}
+
+.link {
+    margin: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    font-weight: 600px;
+    font-style: normal;
+}
+
+.button {
+    margin: 10px;
+    background-color: #0666c0;
+    color: #ffffff;
+}

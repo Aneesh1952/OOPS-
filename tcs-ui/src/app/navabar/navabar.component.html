@@ -1,0 +1,29 @@
+<mat-toolbar id="toolbar">
+
+    <mat-toolbar-row>
+      <span>
+        <a routerLink="" class="link" style="text-decoration: none; font-size: 20px;">HOME</a>
+      </span>
+      <span class="example-spacer"></span>
+      <div *ngIf="!isLoggedIn">
+        <span>
+          <button mat-raised-button (click)="openLoginForm()" class="button">Log in</button>
+        </span>
+        <span>
+          <button mat-raised-button (click)="openSignUpForm()" class="button">Sign up</button>
+        </span>
+        <span>
+          <button mat-raised-button (click)="resetPassword()" class="button">Reset password</button>
+        </span>
+      </div>
+      <div *ngIf="isLoggedIn">
+        <span>
+          <button mat-raised-button (click)="logout()" class="button">Log Out</button>
+        </span>
+        <span>
+          <button mat-raised-button (click)="delete()" class="button">Delete Account</button>
+        </span>
+      </div>
+    </mat-toolbar-row>
+
+  </mat-toolbar>

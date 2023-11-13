@@ -1,0 +1,57 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+#profile {
+  margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heading {
+    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.45;
+  text-align: center;
+}
+
+#profileCard {
+    height: auto;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    display: block;
+    border-radius: 50%;
+    width: 30%;
+    margin-left: 30%;
+}
+
+#profileText{
+    font-style:oblique;
+    font-size: 20px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+#field {
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#profileButtons {
+    margin-left: 35%;
+    margin-bottom: 10px;
+    margin-right: auto;
+    margin-top: 10%;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
